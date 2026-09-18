@@ -343,7 +343,19 @@ function Index() {
               <article key={project.name} className="glass-panel panel-3d-hover rounded-lg p-6 transition-transform">
                 <div className="flex items-start justify-between gap-4">
                   <div className="min-w-0">
-                    <p className="font-display text-xl font-bold text-foreground">{project.name}</p>
+                    {project.link ? (
+                      <a 
+                        href={project.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="font-display text-xl font-bold text-primary hover:underline inline-flex items-center gap-2"
+                        title="View Project"
+                      >
+                        {project.name}
+                      </a>
+                    ) : (
+                      <p className="font-display text-xl font-bold text-foreground">{project.name}</p>
+                    )}
                     <p className="mt-1 text-sm font-semibold text-primary">{project.type}</p>
                   </div>
                   {project.link ? (
