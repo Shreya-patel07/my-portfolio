@@ -135,7 +135,6 @@ const projects = [
   {
     name: "Bugsens",
     type: "AI-Powered Developer Workspace",
-    link: "https://bugsens-app.vercel.app/",
     stack: "React.js, Java, Spring Boot",
     detail:
       "A full-stack, AI-driven workspace enhancing developer productivity with multi-modal debugging tools and secure user authentication.",
@@ -343,28 +342,10 @@ function Index() {
               <article key={project.name} className="glass-panel panel-3d-hover rounded-lg p-6 transition-transform">
                 <div className="flex items-start justify-between gap-4">
                   <div className="min-w-0">
-                    {project.link ? (
-                      <a 
-                        href={project.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="font-display text-xl font-bold text-primary hover:underline inline-flex items-center gap-2"
-                        title="View Project"
-                      >
-                        {project.name}
-                      </a>
-                    ) : (
-                      <p className="font-display text-xl font-bold text-foreground">{project.name}</p>
-                    )}
+                    <p className="font-display text-xl font-bold text-foreground">{project.name}</p>
                     <p className="mt-1 text-sm font-semibold text-primary">{project.type}</p>
                   </div>
-                  {project.link ? (
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform" title="View Project">
-                      <Network className="size-6 shrink-0 text-accent" />
-                    </a>
-                  ) : (
-                    <Network className="size-6 shrink-0 text-accent" />
-                  )}
+                  <Network className="size-6 shrink-0 text-accent" />
                 </div>
                 <p className="mt-4 rounded-md bg-code px-3 py-2 font-mono text-sm text-code-foreground">
                   {project.stack}
