@@ -208,7 +208,7 @@ function Index() {
               </a>
             </Button>
             <Button variant="ghost" size="icon" className="text-muted-foreground hover:bg-secondary hover:text-foreground" asChild>
-              <a href="https://linkedin.com/in/shreyapatel07" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/shreya-patel-785931315" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin className="size-4" />
               </a>
             </Button>
