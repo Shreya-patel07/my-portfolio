@@ -166,16 +166,25 @@ const projects = [
 function Index() {
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    const name = String(formData.get("name") ?? "").trim();
-    const email = String(formData.get("email") ?? "").trim();
-    const message = String(formData.get("message") ?? "").trim();
-    const subject = encodeURIComponent(`Portfolio inquiry from ${name || "website visitor"}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    window.location.href = `mailto:shreyaghadiya07@gmail.com?subject=${subject}&body=${body}`;
-    setSent(true);
+    formData.append("access_key", "02212f3d-98a9-470d-96c9-605e3cb0989c");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (res.ok) {
+        setSent(true);
+        event.currentTarget.reset();
+        setTimeout(() => setSent(false), 5000);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   return (
