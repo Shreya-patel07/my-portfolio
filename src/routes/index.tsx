@@ -135,6 +135,7 @@ const projects = [
   {
     name: "Bugsens",
     type: "AI-Powered Developer Workspace",
+    link: "https://bugsens-app.vercel.app/",
     stack: "React.js, Java, Spring Boot",
     detail:
       "A full-stack, AI-driven workspace enhancing developer productivity with multi-modal debugging tools and secure user authentication.",
@@ -351,6 +352,14 @@ function Index() {
                   {project.stack}
                 </p>
                 <p className="mt-4 leading-7 text-muted-foreground">{project.detail}</p>
+                {project.link && (
+                  <Button className="mt-6" asChild>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                      View Live Project
+                      <ArrowRight className="ml-2 size-4" />
+                    </a>
+                  </Button>
+                )}
               </article>
             ))}
           </div>
