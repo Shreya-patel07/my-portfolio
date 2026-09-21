@@ -48,13 +48,14 @@ const JavaLogo = (props: React.SVGProps<SVGSVGElement>) => (
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Shreya Patel | Full-Stack Developer & Network Engineer" },
+      { title: "Shreya Patel (Shreya Ghadiya) | Full-Stack Developer & Network Engineer" },
+      { name: "keywords", content: "Shreya Patel, Shreya Ghadiya, Portfolio, Full-Stack Developer, Network Engineer, Java, React, Spring Boot, Ahmedabad" },
       {
         name: "description",
         content:
-          "Portfolio for Shreya Patel, a full-stack developer and network engineer specializing in Java, React, .NET, LAN/WAN, and network security.",
+          "Portfolio for Shreya Patel (Shreya Ghadiya), a full-stack developer and network engineer specializing in Java, React, .NET, LAN/WAN, and network security.",
       },
-      { property: "og:title", content: "Shreya Patel | Full-Stack Developer & Network Engineer" },
+      { property: "og:title", content: "Shreya Patel (Shreya Ghadiya) | Full-Stack Developer & Network Engineer" },
       {
         property: "og:description",
         content:
