@@ -121,7 +121,7 @@ const experience = [
     role: "Network Engineer",
     period: "November 2025 - Present",
     details:
-      "• Managed enterprise LAN/WAN networks and core TCP/IP routing to ensure reliable infrastructure connectivity.\n• Resolved user-facing network issues, addressing connectivity, DHCP, firewalls, and secure VPN access.\n• Troubleshot website issues to maintain optimal performance.",
+      "• Troubleshot website issues to maintain optimal performance.\n• Resolved user-facing network issues, addressing connectivity, DHCP, firewalls, and secure VPN access.",
   },
 ];
 
