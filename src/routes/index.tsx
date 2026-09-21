@@ -138,7 +138,7 @@ const projects = [
     liveLink: "https://bugsens-app.vercel.app/",
     stack: "React.js, Java, Spring Boot",
     detail:
-      "A full-stack, AI-driven workspace enhancing developer productivity with multi-modal debugging tools and secure user authentication.",
+      "An AI-powered tool that helps developers instantly find and fix errors in their code",
   },
   {
     name: "CO2 Marketplace",
@@ -146,7 +146,7 @@ const projects = [
     liveLink: "https://co2marketplace.vercel.app/",
     stack: "React.js, Tailwind CSS",
     detail:
-      "A modern platform for tracking and managing carbon footprints, promoting environmental sustainability through an intuitive marketplace interface.",
+      "A marketplace where companies can buy, sell, and track captured carbon to reduce industrial waste",
   },
   {
     name: "E-Commerce Platform",
