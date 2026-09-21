@@ -370,7 +370,7 @@ function Index() {
                   {project.liveLink && (
                     <Button asChild>
                       <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                        Live Demo
+                        Visit {project.name}
                         <ArrowRight className="ml-2 size-4" />
                       </a>
                     </Button>
