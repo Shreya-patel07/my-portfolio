@@ -135,31 +135,34 @@ const projects = [
   {
     name: "Bugsens",
     type: "AI-Powered Developer Workspace",
-    link: "https://bugsens-app.vercel.app/",
+    liveLink: "https://bugsens-app.vercel.app/",
     stack: "React.js, Java, Spring Boot",
     detail:
       "A full-stack, AI-driven workspace enhancing developer productivity with multi-modal debugging tools and secure user authentication.",
   },
   {
-    name: "Enterprise Employee Management System",
-    type: "Enterprise Backend Application",
-    stack: "Java",
+    name: "CO2 Marketplace",
+    type: "Web Application",
+    liveLink: "https://co2marketplace.vercel.app/",
+    stack: "React.js, Tailwind CSS",
     detail:
-      "A robust backend application that streamlines internal operations and securely handles personnel data and employee records.",
+      "A modern platform for tracking and managing carbon footprints, promoting environmental sustainability through an intuitive marketplace interface.",
+  },
+  {
+    name: "E-Commerce Platform",
+    type: "Full-Stack Application",
+    githubLink: "https://github.com/Shreya-patel07/ecom-platform",
+    stack: "Spring Boot, PostgreSQL, React.js",
+    detail:
+      "A comprehensive e-commerce platform featuring scalable backend infrastructure, robust APIs, structured data handling, and secure operations.",
   },
   {
     name: "Car Rental System",
     type: "Desktop Application",
+    githubLink: "https://github.com/Shreya-patel07/car-rental-system",
     stack: "Java",
     detail:
       "A desktop system with admin and user roles for vehicle management, bookings, automated reports, and billing.",
-  },
-  {
-    name: "E-Commerce Application",
-    type: "In Development",
-    stack: "Spring Boot, PostgreSQL, Postman",
-    detail:
-      "A mini e-commerce project with tested APIs, structured data handling, and scalable backend foundations.",
   },
 ];
 
@@ -349,26 +352,53 @@ function Index() {
           <SectionHeading eyebrow="Portfolio" title="Notable projects across full-stack and desktop systems" />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {projects.map((project) => (
-              <article key={project.name} className="glass-panel panel-3d-hover rounded-lg p-6 transition-transform">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="min-w-0">
-                    <p className="font-display text-xl font-bold text-foreground">{project.name}</p>
-                    <p className="mt-1 text-sm font-semibold text-primary">{project.type}</p>
+              <article key={project.name} className="glass-panel panel-3d-hover flex flex-col justify-between rounded-lg p-6 transition-transform">
+                <div>
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="min-w-0">
+                      <p className="font-display text-xl font-bold text-foreground">{project.name}</p>
+                      <p className="mt-1 text-sm font-semibold text-primary">{project.type}</p>
+                    </div>
+                    <Network className="size-6 shrink-0 text-accent" />
                   </div>
-                  <Network className="size-6 shrink-0 text-accent" />
+                  <p className="mt-4 rounded-md bg-code px-3 py-2 font-mono text-sm text-code-foreground w-fit">
+                    {project.stack}
+                  </p>
+                  <p className="mt-4 leading-7 text-muted-foreground">{project.detail}</p>
                 </div>
-                <p className="mt-4 rounded-md bg-code px-3 py-2 font-mono text-sm text-code-foreground">
-                  {project.stack}
-                </p>
-                <p className="mt-4 leading-7 text-muted-foreground">{project.detail}</p>
-                {project.link && (
-                  <Button className="mt-6" asChild>
-                    <a href={project.link} target="_blank" rel="noopener noreferrer">
-                      View Live Project
-                      <ArrowRight className="ml-2 size-4" />
-                    </a>
-                  </Button>
-                )}
+                <div className="mt-6 flex flex-wrap gap-3">
+                  {project.liveLink && (
+                    <Button asChild>
+                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                        Live Demo
+                        <ArrowRight className="ml-2 size-4" />
+                      </a>
+                    </Button>
+                  )}
+                  {project.downloadLink && (
+                    <Button asChild>
+                      <a href={project.downloadLink} target="_blank" rel="noopener noreferrer">
+                        Download App
+                        <Laptop className="ml-2 size-4" />
+                      </a>
+                    </Button>
+                  )}
+                  {project.videoLink && (
+                    <Button variant="secondary" asChild>
+                      <a href={project.videoLink} target="_blank" rel="noopener noreferrer">
+                        Watch Demo
+                      </a>
+                    </Button>
+                  )}
+                  {project.githubLink && (
+                    <Button variant={project.liveLink || project.downloadLink ? "outline" : "default"} asChild>
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 size-4" />
+                        Code
+                      </a>
+                    </Button>
+                  )}
+                </div>
               </article>
             ))}
           </div>
