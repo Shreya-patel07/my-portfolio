@@ -118,10 +118,18 @@ const experience = [
       "• Maintained web applications using ASP.NET (C#) and MySQL Server Database while providing ongoing technical support.",
   },
   {
+    company: "Apphouse Infotech",
+    location: "",
+    role: "Java Full Stack Developer",
+    period: "Jan 2025 - Nov 2025",
+    details:
+      "• Developed full-stack web applications using Spring Boot, React, and REST APIs.\n• Worked with PostgreSQL for database management and integrated AI features into the platform.",
+  },
+  {
     company: "Ishan Technologies",
     location: "",
     role: "Network Engineer",
-    period: "November 2025 - Present",
+    period: "Dec 2025 - Present",
     details:
       "• Troubleshot website issues to maintain optimal performance.\n• Resolved user-facing network issues, addressing connectivity, DHCP, firewalls, and secure VPN access.",
   },
