@@ -49,14 +49,14 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { name: "google-site-verification", content: "oqtJbu5rIKTL2_kg7lYrMkVuKav6wZwN2fTeNAM5Y3c" },
-      { title: "Shreya Patel (Shreya Ghadiya) | Full-Stack Developer & Network Engineer" },
-      { name: "keywords", content: "Shreya Patel, Shreya Ghadiya, Portfolio, Full-Stack Developer, Network Engineer, Java, React, Spring Boot, Ahmedabad" },
+      { title: "Shreya Patel (Shreya Ghadiya) | Full-Stack Developer" },
+      { name: "keywords", content: "Shreya Patel, Shreya Ghadiya, Portfolio, Full-Stack Developer, Java, React, Spring Boot, Ahmedabad" },
       {
         name: "description",
         content:
-          "Portfolio for Shreya Patel (Shreya Ghadiya), a full-stack developer and network engineer specializing in Java, React, .NET, LAN/WAN, and network security.",
+          "Portfolio for Shreya Patel (Shreya Ghadiya), a full-stack developer specializing in Java, React, Spring Boot, and scalable web applications.",
       },
-      { property: "og:title", content: "Shreya Patel (Shreya Ghadiya) | Full-Stack Developer & Network Engineer" },
+      { property: "og:title", content: "Shreya Patel (Shreya Ghadiya) | Full-Stack Developer" },
       {
         property: "og:description",
         content:
@@ -237,11 +237,11 @@ function Index() {
       </header>
 
       <section id="home" className="tech-grid relative min-h-[92vh] pt-28">
-        <div className="section-shell grid items-center gap-12 pb-20 pt-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.8fr)] lg:pt-16">
+        <div className="section-shell grid items-center gap-12 pb-20 pt-8 lg:pt-16">
           <div className="reveal-up max-w-4xl">
 
             <h1 className="font-display text-3xl font-bold leading-snug text-gradient-3d sm:text-4xl lg:text-5xl">
-              Full-Stack Developer & Network Engineer
+              Full-Stack Developer
             </h1>
             <div className="mt-6 text-lg text-muted-foreground sm:text-xl">
               <p>
@@ -261,15 +261,6 @@ function Index() {
             </div>
           </div>
 
-          <div className="reveal-up mx-auto w-full max-w-sm lg:justify-self-end">
-            <div className="glass-panel relative overflow-hidden rounded-lg p-5">
-              <div className="aspect-[4/5] rounded-xl border border-border bg-transparent p-5 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)]">
-                <div className="flex h-full w-full overflow-hidden rounded-lg border border-primary/20 shadow-sm">
-                  <img src="/profile.png" alt="Shreya Patel" className="h-full w-full object-cover" />
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
