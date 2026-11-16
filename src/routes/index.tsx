@@ -120,10 +120,10 @@ const experience = [
   {
     company: "Apphouse Infotech",
     location: "",
-    role: "Java Full Stack Developer",
+    role: "Software Developer – Java Full Stack",
     period: "Jan 2025 - Nov 2025",
     details:
-      "• Developed full-stack web applications using Spring Boot, React, and REST APIs.\n• Worked with PostgreSQL for database management and integrated AI features into the platform.",
+      "• Built full-stack web applications using Java, Spring Boot, React.js, and REST APIs.\n• Managed databases with PostgreSQL and MySQL, and implemented AI integration into the platform.",
   },
   {
     company: "Ishan Technologies",
@@ -244,10 +244,9 @@ function Index() {
         </nav>
       </header>
 
-      <section id="home" className="tech-grid relative min-h-[92vh] pt-28">
-        <div className="section-shell grid items-center gap-12 pb-20 pt-8 lg:pt-16">
-          <div className="reveal-up max-w-4xl">
-
+      <section id="home" className="tech-grid relative pt-28">
+        <div className="section-shell flex flex-col items-center justify-center gap-6 py-20 text-center">
+          <div className="reveal-up max-w-3xl">
             <h1 className="font-display text-3xl font-bold leading-snug text-gradient-3d sm:text-4xl lg:text-5xl">
               Full-Stack Developer
             </h1>
@@ -256,7 +255,7 @@ function Index() {
                 I design and develop scalable and high-performance digital solutions to meet the needs of modern businesses.
               </p>
             </div>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Button variant="hero" size="lg" asChild>
                 <a href="#portfolio">
                   View My Work
@@ -268,7 +267,6 @@ function Index() {
               </Button>
             </div>
           </div>
-
         </div>
       </section>
 
